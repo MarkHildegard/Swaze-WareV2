@@ -1,44 +1,74 @@
-/* Allgemeines Styling */
+/* Grundlegende Layout-Einstellungen */
 body {
     font-family: 'Arial', sans-serif;
+    background: linear-gradient(45deg, #1a1a1a, #2d2d2d);
+    color: #fff;
     text-align: center;
-    background: linear-gradient(45deg, #111, #222);
-    color: white;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .container {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
     max-width: 600px;
-    margin: 100px auto;
-    background: rgba(0, 0, 0, 0.9);
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    width: 100%;
+    text-align: center;
 }
 
 h1 {
-    font-size: 40px;
-    color: #f1c40f;
-    text-shadow: 2px 2px 10px rgba(255, 215, 0, 0.8);
+    font-size: 36px;
+    color: #f39c12;
+    text-shadow: 3px 3px 8px rgba(241, 196, 15, 0.7);
 }
 
 h2 {
+    font-size: 24px;
     color: #1abc9c;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-button {
-    background: #e74c3c;
+/* Verifizierungsschritte */
+.verification-step {
+    margin: 20px 0;
+}
+
+.verification-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #16a085;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background 0.3s ease;
+}
+
+.verification-link:hover {
+    background: #1abc9c;
+}
+
+/* Download-Button */
+.download-btn {
+    background: #f39c12;
     color: white;
     font-size: 20px;
     padding: 15px 30px;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
-    margin-top: 20px;
+    margin-top: 30px;
+    transition: background 0.3s ease;
 }
 
-button:hover {
-    background: #c0392b;
+.download-btn:hover {
+    background: #e67e22;
 }
