@@ -2,19 +2,34 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background: url('https://cdn.discordapp.com/attachments/1339581084362342481/1347202011208093777/standard_6.gif') no-repeat center center fixed;
-    background-size: cover;
-    color: white;
     margin: 0;
     padding: 0;
+    height: 100vh; /* Volle Höhe der Seite */
     animation: fadeIn 1s ease-in-out;
+    background: linear-gradient(45deg, #000000, #800080); /* Schwarz-Lila Verlauf */
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite; /* Animiert den Hintergrund */
+    color: white;
+}
+
+/* Animation des Hintergrunds */
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 /* Container für Inhalte */
 .container, .verify-container {
     max-width: 600px;
     margin: 50px auto;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Schwarzer Hintergrund mit Transparenz */
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
