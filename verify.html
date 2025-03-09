@@ -6,15 +6,25 @@
     <title>Verifizierung - Swaze-Ware V2</title>
     <link rel="stylesheet" href="style.css">
     <script>
-        function checkVerification() {
-            const tiktokVerified = document.getElementById('tiktok').checked;
-            const discordVerified = document.getElementById('discord').checked;
+        let tiktokClicked = false;
+        let discordClicked = false;
 
-            if (tiktokVerified && discordVerified) {
+        function checkVerification() {
+            if (tiktokClicked && discordClicked) {
                 document.getElementById('download-btn').style.display = 'block';
             } else {
                 document.getElementById('download-btn').style.display = 'none';
             }
+        }
+
+        function trackTikTokClick() {
+            tiktokClicked = true;
+            checkVerification();
+        }
+
+        function trackDiscordClick() {
+            discordClicked = true;
+            checkVerification();
         }
     </script>
 </head>
@@ -25,15 +35,15 @@
         
         <div>
             <label for="tiktok">
-                <input type="checkbox" id="tiktok" onclick="checkVerification()"> Folge unserem TikTok-Kanal
-                <a href="https://www.tiktok.com/@kryptozyrox" target="_blank">Hier klicken</a>
+                <input type="checkbox" id="tiktok" disabled> Folge unserem TikTok-Kanal
+                <a href="https://www.tiktok.com/@kryptozyrox" target="_blank" onclick="trackTikTokClick()">Hier klicken</a>
             </label>
         </div>
         
         <div>
             <label for="discord">
-                <input type="checkbox" id="discord" onclick="checkVerification()"> Tritt unserem Discord bei
-                <a href="https://discord.gg/mmGRadMrhM" target="_blank">Hier klicken</a>
+                <input type="checkbox" id="discord" disabled> Tritt unserem Discord bei
+                <a href="https://discord.gg/mmGRadMrhM" target="_blank" onclick="trackDiscordClick()">Hier klicken</a>
             </label>
         </div>
         
