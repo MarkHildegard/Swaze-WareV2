@@ -1,49 +1,46 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verifizierung - Swaze-Ware V2</title>
+    <title>Verification - Swaze-Ware V2</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        let tiktokClicked = false;
-        let discordClicked = false;
-
-        function checkVerification() {
-            if (tiktokClicked && discordClicked) {
-                document.getElementById('download-btn').style.display = 'block';
-            } else {
-                document.getElementById('download-btn').style.display = 'none';
-            }
-        }
-
-        function trackTikTokClick() {
-            tiktokClicked = true;
-            checkVerification();
-        }
-
-        function trackDiscordClick() {
-            discordClicked = true;
-            checkVerification();
-        }
-    </script>
 </head>
 <body>
-    <div class="container">
-        <h1>🔥 Swaze-Ware V2 Verifizierung 🔥</h1>
-        <h2>Verifiziere dich, um den besten Free Fortnite Cheat herunterzuladen!</h2>
+    <div class="verify-container">
+        <h1>Verify to Download the Cheat</h1>
+        <p class="description">Follow the TikTok account and join the Discord server to verify:</p>
         
-        <div class="verification-step">
-            <p><strong>1. Folge unserem TikTok-Kanal:</strong></p>
-            <a href="https://www.tiktok.com/@kryptozyrox" target="_blank" onclick="trackTikTokClick()" class="verification-link">Hier klicken und folgen!</a>
+        <div class="verification-links">
+            <a href="https://www.tiktok.com/@kryptozyrox" target="_blank" class="verify-link">Follow on TikTok</a>
+            <a href="https://discord.gg/mmGRadMrhM" target="_blank" class="verify-link">Join Discord</a>
         </div>
         
-        <div class="verification-step">
-            <p><strong>2. Tritt unserem Discord-Server bei:</strong></p>
-            <a href="https://discord.gg/mmGRadMrhM" target="_blank" onclick="trackDiscordClick()" class="verification-link">Hier klicken und joinen!</a>
+        <div class="checkbox">
+            <input type="checkbox" id="tiktok-verified">
+            <label for="tiktok-verified" class="checkbox-label">I followed the TikTok account</label>
+        </div>
+        
+        <div class="checkbox">
+            <input type="checkbox" id="discord-verified">
+            <label for="discord-verified" class="checkbox-label">I joined the Discord server</label>
         </div>
 
-        <button id="download-btn" class="download-btn" style="display: none;" onclick="window.location.href='https://gofile.io/d/Z1TbG3'">🔽 Jetzt herunterladen</button>
+        <button id="download-btn" disabled>Download Free Fortnite Cheat</button>
     </div>
+
+    <script>
+        // Enable download button when both checkboxes are checked
+        document.getElementById("tiktok-verified").addEventListener("change", checkVerification);
+        document.getElementById("discord-verified").addEventListener("change", checkVerification);
+
+        function checkVerification() {
+            const tiktokChecked = document.getElementById("tiktok-verified").checked;
+            const discordChecked = document.getElementById("discord-verified").checked;
+
+            // Enable button if both conditions are true
+            document.getElementById("download-btn").disabled = !(tiktokChecked && discordChecked);
+        }
+    </script>
 </body>
 </html>

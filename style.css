@@ -2,7 +2,7 @@
 body {
     font-family: 'Arial', sans-serif;
     text-align: center;
-    background: url('https://cdn.discordapp.com/attachments/1339581084362342481/1347202011208093777/standard_6.gif?ex=67ceeba5&is=67cd9a25&hm=9f40e6d8a179e97378ce7acdb72867b00bc6cd9312969511b3933934e0b75684&') no-repeat center center fixed;
+    background: url('https://cdn.discordapp.com/attachments/1339581084362342481/1347202011208093777/standard_6.gif') no-repeat center center fixed;
     background-size: cover;
     color: white;
     margin: 0;
@@ -10,7 +10,8 @@ body {
     animation: fadeIn 1s ease-in-out;
 }
 
-.container {
+/* Container für Inhalte */
+.container, .verify-container {
     max-width: 600px;
     margin: 50px auto;
     background: rgba(0, 0, 0, 0.8);
@@ -20,7 +21,8 @@ body {
     transition: transform 0.3s;
 }
 
-.container:hover {
+/* Container Hover-Effekt */
+.container:hover, .verify-container:hover {
     transform: scale(1.05);
 }
 
@@ -31,67 +33,68 @@ h1 {
     text-shadow: 3px 3px 8px rgba(241, 196, 15, 0.5);
 }
 
-h3 {
+h2 {
     margin-top: 20px;
     color: #1abc9c;
     text-shadow: 1px 1px 4px rgba(26, 188, 156, 0.7);
 }
 
-/* Player Styling */
-#player {
-    margin-top: 20px;
-    padding: 15px;
-    background: #222;
-    border-radius: 12px;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-}
-
-/* Lautstärkeregler */
-#volume-slider {
-    width: 100px;
-    margin-left: 15px;
-}
-
-/* Playlist */
-ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-li {
-    padding: 12px;
-    margin: 8px 0;
-    background: #444;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s, background 0.3s;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-li:hover {
-    background: #555;
-    transform: scale(1.05);
-}
-
-/* Favoriten-Button */
-.fav-btn {
-    background: none;
-    border: none;
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-    transition: 0.3s;
-}
-
-.fav-btn:hover {
+.description {
+    margin: 20px 0;
+    font-size: 18px;
     color: #f39c12;
 }
 
-/* Wenn Song favorisiert wurde */
-.fav-active {
-    color: #e74c3c;
+/* Free Fortnite Cheat Button */
+button {
+    background-color: #16a085;
+    color: white;
+    border: none;
+    padding: 20px 40px; /* Größere Padding-Werte für mehr Größe */
+    font-size: 20px; /* Größere Schrift */
+    border-radius: 10px; /* Weiche Ecken */
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1abc9c;
+    transform: scale(1.1); /* Button leicht vergrößern bei Hover */
+}
+
+button:disabled {
+    background-color: #7f8c8d;
+    cursor: not-allowed;
+}
+
+/* Verifizierung-Links */
+.verify-link {
+    background-color: #e74c3c;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 10px;
+    display: inline-block;
+    transition: background 0.3s;
+}
+
+.verify-link:hover {
+    background-color: #c0392b;
+}
+
+/* Checkbox und Label */
+.checkbox {
+    margin: 15px 0;
+}
+
+.checkbox-label {
+    color: #ecf0f1;
+    font-size: 16px;
+}
+
+.checkbox input {
+    margin-right: 10px;
 }
 
 /* Animationen */
