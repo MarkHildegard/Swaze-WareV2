@@ -1,17 +1,15 @@
 let tiktokClicked = false;
 let discordClicked = false;
 let downloadBtn = document.getElementById("download-btn");
+let verifiedContent = document.getElementById("verified-content");
+let downloadLinkBtn = document.getElementById("download-link");
 
 // Funktion, um den Download-Button zu aktivieren
 function checkVerification() {
     if (tiktokClicked && discordClicked) {
-        downloadBtn.textContent = "✅ Download freigeschaltet!";
-        downloadBtn.disabled = false;
-        downloadBtn.style.background = "#16a085";
-        downloadBtn.onclick = function() {
-            // Gofile.io-Link für die Datei
-            window.location.href = "https://gofile.io/d/Z1TbG3"; 
-        };
+        // Anzeigen des verifizierten Inhalts
+        verifiedContent.style.display = "block"; 
+        downloadBtn.disabled = true;
     }
 }
 
@@ -25,4 +23,9 @@ document.getElementById("tiktok-link").addEventListener("click", function() {
 document.getElementById("discord-link").addEventListener("click", function() {
     discordClicked = true;
     checkVerification();
+});
+
+// Event-Listener für den Download-Button
+downloadLinkBtn.addEventListener("click", function() {
+    window.location.href = "https://gofile.io/d/Z1TbG3"; // Gofile.io-Link
 });
