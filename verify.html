@@ -5,25 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Verifizierung - Swaze-Ware V2</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function checkVerification() {
+            const tiktokVerified = document.getElementById('tiktok').checked;
+            const discordVerified = document.getElementById('discord').checked;
+
+            if (tiktokVerified && discordVerified) {
+                document.getElementById('download-btn').style.display = 'block';
+            } else {
+                document.getElementById('download-btn').style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <div class="container">
-        <h1>🚀 Verifizierung notwendig!</h1>
-        <p>Folge den Anweisungen, um den Free Fortnite Cheat freizuschalten.</p>
-
-        <div class="step">
-            <h2>1️⃣ Folge diesem TikTok-Kanal</h2>
-            <a href="https://www.tiktok.com/@kryptozyrox" target="_blank" id="tiktok-link" class="button">📱 TikTok öffnen</a>
+        <h1>🔥 Swaze-Ware V2 Verifizierung 🔥</h1>
+        <h2>Um den Free Fortnite Cheat herunterzuladen, verifiziere dich bitte:</h2>
+        
+        <div>
+            <label for="tiktok">
+                <input type="checkbox" id="tiktok" onclick="checkVerification()"> Folge unserem TikTok-Kanal
+                <a href="https://www.tiktok.com/@kryptozyrox" target="_blank">Hier klicken</a>
+            </label>
         </div>
-
-        <div class="step">
-            <h2>2️⃣ Trete unserem Discord bei</h2>
-            <a href="https://discord.gg/mmGRadMrhM" target="_blank" id="discord-link" class="button">💬 Discord beitreten</a>
+        
+        <div>
+            <label for="discord">
+                <input type="checkbox" id="discord" onclick="checkVerification()"> Tritt unserem Discord bei
+                <a href="https://discord.gg/mmGRadMrhM" target="_blank">Hier klicken</a>
+            </label>
         </div>
-
-        <button id="verify-btn" disabled>🔓 Download freischalten</button>
+        
+        <button id="download-btn" style="display: none;" onclick="window.location.href='https://gofile.io/d/Z1TbG3'">🔽 Jetzt herunterladen</button>
     </div>
-
-    <script src="script.js"></script>
 </body>
 </html>
