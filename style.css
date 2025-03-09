@@ -5,28 +5,27 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh; /* Volle Höhe der Seite */
-    animation: fadeIn 1s ease-in-out;
     background: linear-gradient(45deg, #000000, #800080); /* Schwarz-Lila Verlauf */
     background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite; /* Animiert den Hintergrund */
+    animation: gradientBG 15s ease infinite, fadeIn 1s ease-in-out;
     color: white;
-}
-
-/* Animation des Hintergrunds */
-@keyframes gradientBG {
+  }
+  
+  /* Animation des Hintergrunds */
+  @keyframes gradientBG {
     0% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
     50% {
-        background-position: 100% 50%;
+      background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+      background-position: 0% 50%;
     }
-}
-
-/* Container für Inhalte */
-.container, .verify-container {
+  }
+  
+  /* Container für Inhalte */
+  .container, .verify-container {
     max-width: 600px;
     margin: 50px auto;
     background: rgba(0, 0, 0, 0.8); /* Schwarzer Hintergrund mit Transparenz */
@@ -34,34 +33,33 @@ body {
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
     transition: transform 0.3s;
-}
-
-/* Container Hover-Effekt */
-.container:hover, .verify-container:hover {
+  }
+  
+  .container:hover, .verify-container:hover {
     transform: scale(1.05);
-}
-
-/* Überschriften */
-h1 {
+  }
+  
+  /* Überschriften */
+  h1 {
     font-size: 32px;
     color: #f1c40f;
     text-shadow: 3px 3px 8px rgba(241, 196, 15, 0.5);
-}
-
-h2 {
+  }
+  
+  h2 {
     margin-top: 20px;
     color: #1abc9c;
     text-shadow: 1px 1px 4px rgba(26, 188, 156, 0.7);
-}
-
-.description {
+  }
+  
+  .description {
     margin: 20px 0;
     font-size: 18px;
     color: #f39c12;
-}
-
-/* Free Fortnite Cheat Button */
-button {
+  }
+  
+  /* Buttons */
+  button {
     background-color: #16a085;
     color: white;
     border: none;
@@ -70,20 +68,20 @@ button {
     border-radius: 10px; /* Weiche Ecken */
     cursor: pointer;
     transition: 0.3s;
-}
-
-button:hover {
+  }
+  
+  button:hover {
     background-color: #1abc9c;
-    transform: scale(1.1); /* Button leicht vergrößern bei Hover */
-}
-
-button:disabled {
+    transform: scale(1.1);
+  }
+  
+  button:disabled {
     background-color: #7f8c8d;
     cursor: not-allowed;
-}
-
-/* Verifizierung-Links */
-.verify-link {
+  }
+  
+  /* Verifizierung-Links */
+  .verify-link {
     background-color: #e74c3c;
     color: white;
     text-decoration: none;
@@ -92,28 +90,20 @@ button:disabled {
     margin: 10px;
     display: inline-block;
     transition: background 0.3s;
-}
-
-.verify-link:hover {
+  }
+  
+  .verify-link:hover {
     background-color: #c0392b;
-}
-
-/* Checkbox und Label */
-.checkbox {
-    margin: 15px 0;
-}
-
-.checkbox-label {
-    color: #ecf0f1;
-    font-size: 16px;
-}
-
-.checkbox input {
-    margin-right: 10px;
-}
-
-/* Animationen */
-@keyframes fadeIn {
+  }
+  
+  /* Download-Buttons Container */
+  .download-buttons {
+    margin-top: 20px;
+  }
+  
+  /* Animationen */
+  @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
-}
+  }
+  

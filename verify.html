@@ -9,7 +9,7 @@
 <body>
   <div class="verify-container">
     <h1>Verify Your Action</h1>
-    <p class="description">To download the cheat, please click on both links below:</p>
+    <p class="description">To download the cheats, please click on both links below:</p>
     
     <div class="verification-links">
       <a href="https://www.tiktok.com/@kryptozyrox" target="_blank" id="tiktokLink" class="verify-link">
@@ -20,9 +20,14 @@
       </a>
     </div>
     
-    <button id="downloadButton" disabled onclick="window.location.href='https://gofile.io/d/Z1TbG3'">
-      Download Free Fortnite Cheat
-    </button>
+    <div class="download-buttons">
+      <button id="downloadFortnite" disabled onclick="window.location.href='https://gofile.io/d/Z1TbG3'">
+        Download Free Fortnite Cheat
+      </button>
+      <button id="downloadCrosshair" disabled onclick="window.location.href='https://gofile.io/d/f54jiJ'">
+        Download Free CrosshairX
+      </button>
+    </div>
   </div>
 
   <script>
@@ -41,7 +46,8 @@
 
     function checkVerification() {
       if (tiktokClicked && discordClicked) {
-        document.getElementById("downloadButton").disabled = false;
+        document.getElementById("downloadFortnite").disabled = false;
+        document.getElementById("downloadCrosshair").disabled = false;
       }
     }
   </script>
