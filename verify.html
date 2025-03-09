@@ -3,44 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification - Swaze-Ware V2</title>
+    <title>Verify Your Action</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="verify-container">
-        <h1>Verify to Download the Cheat</h1>
-        <p class="description">Follow the TikTok account and join the Discord server to verify:</p>
-        
-        <div class="verification-links">
-            <a href="https://www.tiktok.com/@kryptozyrox" target="_blank" class="verify-link">Follow on TikTok</a>
-            <a href="https://discord.gg/mmGRadMrhM" target="_blank" class="verify-link">Join Discord</a>
-        </div>
+        <h1>Verify Your Action</h1>
+        <p class="description">Please follow these steps to verify and get your cheat!</p>
         
         <div class="checkbox">
-            <input type="checkbox" id="tiktok-verified">
-            <label for="tiktok-verified" class="checkbox-label">I followed the TikTok account</label>
-        </div>
-        
-        <div class="checkbox">
-            <input type="checkbox" id="discord-verified">
-            <label for="discord-verified" class="checkbox-label">I joined the Discord server</label>
+            <label class="checkbox-label">
+                <input type="checkbox" id="followCheck"> Follow us on <a href="https://www.tiktok.com/@kryptozyrox" target="_blank">TikTok</a> and join our <a href="https://discord.gg/mmGRadMrhM" target="_blank">Discord</a>!
+            </label>
         </div>
 
-        <button id="download-btn" disabled>Download Free Fortnite Cheat</button>
+        <button id="downloadButton" disabled onclick="window.location.href='https://gofile.io/d/Z1TbG3'">Download Free Fortnite Cheat</button>
     </div>
 
     <script>
-        // Enable download button when both checkboxes are checked
-        document.getElementById("tiktok-verified").addEventListener("change", checkVerification);
-        document.getElementById("discord-verified").addEventListener("change", checkVerification);
-
-        function checkVerification() {
-            const tiktokChecked = document.getElementById("tiktok-verified").checked;
-            const discordChecked = document.getElementById("discord-verified").checked;
-
-            // Enable button if both conditions are true
-            document.getElementById("download-btn").disabled = !(tiktokChecked && discordChecked);
-        }
+        document.getElementById("followCheck").addEventListener("change", function() {
+            const downloadButton = document.getElementById("downloadButton");
+            if (this.checked) {
+                downloadButton.disabled = false; // Enable button when verified
+            } else {
+                downloadButton.disabled = true; // Disable button if not verified
+            }
+        });
     </script>
 </body>
 </html>
