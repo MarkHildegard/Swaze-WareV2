@@ -1,55 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Verification - Swaze-Ware V2</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verification</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="verify-container">
-    <h1>Verify Your Action</h1>
-    <p class="description">To download the cheats, please click on both links below:</p>
-    
-    <div class="verification-links">
-      <a href="https://www.tiktok.com/@kryptozyrox" target="_blank" id="tiktokLink" class="verify-link">
-        Follow on TikTok
-      </a>
-      <a href="https://discord.gg/mmGRadMrhM" target="_blank" id="discordLink" class="verify-link">
-        Join Discord
-      </a>
+    <div class="container">
+        <h1>Complete the verification</h1>
+        <p>Follow us on TikTok and join our Discord.</p>
+        <button onclick="verify()">✅ I followed</button>
+        <a id="downloadBtn" href="#" style="display:none;" download>⬇️ Download Cheat</a>
     </div>
-    
-    <div class="download-buttons">
-      <button id="downloadFortnite" disabled onclick="window.location.href='https://gofile.io/d/Z1TbG3'">
-        Download Free Fortnite Cheat
-      </button>
-      <button id="downloadCrosshair" disabled onclick="window.location.href='https://gofile.io/d/f54jiJ'">
-        Download Free CrosshairX
-      </button>
-    </div>
-  </div>
 
-  <script>
-    let tiktokClicked = false;
-    let discordClicked = false;
-
-    document.getElementById("tiktokLink").addEventListener("click", function(){
-      tiktokClicked = true;
-      checkVerification();
-    });
-
-    document.getElementById("discordLink").addEventListener("click", function(){
-      discordClicked = true;
-      checkVerification();
-    });
-
-    function checkVerification() {
-      if (tiktokClicked && discordClicked) {
-        document.getElementById("downloadFortnite").disabled = false;
-        document.getElementById("downloadCrosshair").disabled = false;
-      }
-    }
-  </script>
+    <script>
+        function verify() {
+            document.getElementById('downloadBtn').href = "https://gofile.io/d/Z1TbG3";
+            document.getElementById('downloadBtn').style.display = "block";
+        }
+    </script>
 </body>
 </html>
