@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiveM Cheat - Swaze-Ware V2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Buy FiveM Cheat</h1>
+        <p>Select your desired duration:</p>
+        
+        <button onclick="buy('1 Day', 3.00)">🕐 1 Day - $3.00</button>
+        <button onclick="buy('1 Week', 9.00)">📆 1 Week - $9.00</button>
+        <button onclick="buy('1 Month', 27.00)">🗓️ 1 Month - $27.00</button>
+        <button onclick="buy('Lifetime', 40.00)">💎 Lifetime - $40.00</button>
+
+        <button onclick="window.location.href='paid.html'">🔙 Back</button>
+    </div>
+
+    <script>
+        function buy(duration, price) {
+            let email = "kryptoleon12@gmail.com";
+            let paypalUrl = `https://www.paypal.com/paypalme/${email}/${price}`;
+            window.location.href = paypalUrl;
+        }
+    </script>
+</body>
+</html> 
