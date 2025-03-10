@@ -1,37 +1,86 @@
+/* Allgemeine Einstellungen */
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    background: linear-gradient(-45deg, #20002c, #cbb4d4, #20002c);
+    background: linear-gradient(-45deg, #2c003e, #7a00ff, #2c003e, #7a00ff);
     background-size: 400% 400%;
-    animation: animate 10s infinite alternate ease-in-out;
+    animation: gradientBG 10s ease infinite;
     color: white;
+    text-align: center;
     margin: 0;
     padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-@keyframes animate {
+/* Hintergrund-Animation */
+@keyframes gradientBG {
     0% { background-position: 0% 50%; }
-    100% { background-position: 100% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
+/* Container für Inhalt */
 .container {
-    margin: 50px auto;
-    width: 50%;
+    width: 80%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0.7);
     padding: 20px;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 12px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
+/* Überschriften */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Buttons */
 button {
-    padding: 10px;
-    margin-top: 10px;
-    cursor: pointer;
-    background: #6a0dad;
+    background: #7a00ff;
     color: white;
+    padding: 15px 30px;
+    font-size: 18px;
     border: none;
+    margin: 10px;
+    cursor: pointer;
     border-radius: 5px;
+    transition: 0.3s;
 }
 
 button:hover {
-    background: #8a2be2;
+    background: #5200b5;
+    transform: scale(1.05);
+}
+
+/* Links */
+a {
+    color: #ff00ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Für kleinere Bildschirme */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+    }
 }
