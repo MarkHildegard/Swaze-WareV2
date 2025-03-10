@@ -3,22 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Verification</title>
+    <title>Verify - Fortnite Cheat</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <h1>Complete the verification</h1>
-        <p>Follow us on TikTok and join our Discord.</p>
-        <button onclick="verify()">✅ I followed</button>
-        <a id="downloadBtn" href="#" style="display:none;" download>⬇️ Download Cheat</a>
+        <h1>Complete Verification</h1>
+        <p>Follow our TikTok and join our Discord to unlock the download.</p>
+
+        <a id="tiktokFortnite" href="https://www.tiktok.com/@kryptozyrox" target="_blank" onclick="trackClick('tiktokFortnite')">✅ Follow on TikTok</a><br><br>
+        <a id="discordFortnite" href="https://discord.gg/mmGRadMrhM" target="_blank" onclick="trackClick('discordFortnite')">✅ Join Discord</a><br><br>
+
+        <button id="downloadFortnite" style="display:none;" onclick="downloadCheat()">⬇️ Download Fortnite Cheat</button>
     </div>
 
     <script>
-        function verify() {
-            document.getElementById('downloadBtn').href = "https://gofile.io/d/Z1TbG3";
-            document.getElementById('downloadBtn').style.display = "block";
+        function trackClick(platform) {
+            localStorage.setItem(platform, "clicked");
+            checkVerification();
         }
+
+        function checkVerification() {
+            let isVerified = localStorage.getItem("tiktokFortnite") === "clicked" &&
+                             localStorage.getItem("discordFortnite") === "clicked";
+
+            if (isVerified) {
+                document.getElementById('downloadFortnite').style.display = "block";
+            }
+        }
+
+        function downloadCheat() {
+            window.location.href = "https://gofile.io/d/Z1TbG3";
+        }
+
+        // Check verification on page load
+        checkVerification();
     </script>
 </body>
 </html>
